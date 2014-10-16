@@ -1,0 +1,21 @@
+{
+  "name": "tests-highways",
+  "version": "0.0.1",
+  "description": "JavaScript tests examples",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/igncp/tests-highways.git"
+  },
+  "author": "igncp",
+  "license": "MIT",
+  "dependencies": {
+    "jasmine-node": "^1.14.5",
+    "karma-cli": "0.0.4",
+    "karma-phantomjs-launcher": "^0.1.4"
+  },
+  "scripts": {
+    "jasmine-karma": "node_modules/karma-cli/bin/karma start tests/unit/frontend/jasmine/karma.conf.js || true",
+    "jasmine-node": "node_modules/jasmine-node/bin/jasmine-node --verbose tests/unit/backend/jasmine-node/**/*-spec.js || true"
+  }
+}
