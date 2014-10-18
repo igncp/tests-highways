@@ -8,4 +8,10 @@
     return a + b;
   };
 
+  fs.constant = 2;
+  
+  fs.sumWithConstant = function(a,b) {
+    return a + b + this.constant;
+  };
+
 }).call(this);

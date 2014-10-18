@@ -5,4 +5,10 @@
     "igncp <icarbajop@gmail.com>"
   ],
   "license": "MIT",
+  "dependencies": {
+    "extjs": "~5.0.1-1255",
+    "angular": "~1.3.0",
+    "backbone": "~1.1.2",
+    "d3": "~3.4.13"
+  }
 }
