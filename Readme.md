@@ -20,3 +20,9 @@ See the package.json to see which are the called commands, or run `npm run list`
 At this point, these JavaScript frameworks are being used:
 
 - ExtJS
+
+## Special cases
+
+In some cases, you must take extra action to run the tests. They are listes here:
+
+- For ExtJS, you must start a server. In the root directory of the project and with another terminal of the one that runs the tests, call `npm run sencha-extjs-server`

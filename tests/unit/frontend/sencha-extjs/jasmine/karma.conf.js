@@ -1,22 +1,49 @@
+var r = '../../../../../'; // root dir
+
 module.exports = function(config) {
   config.set({
     basePath: '',
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine', 'sinon'],
     files: [
-      '../../../../../node_modules/lodash/lodash.js', // as utility
+      r + 'node_modules/lodash/lodash.js', // as utility
 
-      '../../../../../vendors/extjs/ext-all.js',
-      {pattern: '../../../../../vendors/extjs/**/*.js', watched: false, included: false, served: true},
+      r + 'vendors/extjs/ext-all.js',
 
-      '../../../../../src/frontend/sencha-extjs/**/*.js',
-      
+      {
+        pattern: r + 'vendors/extjs/**/*.js',
+        watched: false,
+        included: false,
+        served: true
+      },
+
+      {
+        pattern: r + 'src/frontend/sencha-extjs/simple/**/*.js',
+        watched: true,
+        included: false,
+        served: true
+      },
+
+      r + 'src/frontend/sencha-extjs/**/app.js',
+
       './**/*-spec.js'
     ],
+    
+    proxies: {
+      '/simple-app': 'http://localhost:1841/simple/app'
+    },
+
     exclude: [
-      '../../../../../vendors/extjs/examples/**/*.js'
+      r + 'vendors/extjs/examples/**/*.js'
     ],
-    preprocessors: {},
-    reporters: ['dots'],
+    preprocessors: {
+      '../../../../../src/frontend/sencha-extjs/**/*.js': ['coverage']
+    },
+    reporters: ['dots', 'coverage'],
+    coverageReporter: {
+      type: 'html',
+      dir: r + 'karma-coverage'
+
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
@@ -25,6 +52,8 @@ module.exports = function(config) {
     singleRun: false,
     plugins: [
       'karma-jasmine',
+      'karma-sinon',
+      'karma-coverage',
       'karma-phantomjs-launcher'
     ]
   });

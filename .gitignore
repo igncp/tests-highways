@@ -1,3 +1,4 @@
 node_modules
 vendors
 npm-debug.log
+karma-coverage
