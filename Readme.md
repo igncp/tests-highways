@@ -25,4 +25,4 @@ At this point, these JavaScript frameworks are being used:
 
 In some cases, you must take extra action to run the tests. They are listes here:
 
-- For ExtJS, you must start a server. In the root directory of the project and with another terminal of the one that runs the tests, call `npm run sencha-extjs-server`
+- For ExtJS tests, you must start a server. In the root directory of the project and with another terminal of the one that runs the tests, call `npm run sencha-extjs-server`

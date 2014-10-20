@@ -21,7 +21,7 @@ describe('sencha-extjs:', function() {
     });
     waitsFor(function() {
       return ready === true;
-    }, 'Timed out', 2000);
+    }, 'Timed out', 3500);
   });
 
   it('Jasmine works', function() {

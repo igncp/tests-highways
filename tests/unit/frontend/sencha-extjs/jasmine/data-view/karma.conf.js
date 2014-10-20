@@ -1,4 +1,4 @@
-var r = '../../../../../'; // root dir
+var r = '../../../../../../'; // root dir
 
 module.exports = function(config) {
   config.set({
@@ -16,18 +16,11 @@ module.exports = function(config) {
         served: true
       },
 
-      {
-        pattern: r + 'src/frontend/sencha-extjs/simple/**/*.js',
-        watched: true,
-        included: false,
-        served: true
-      },
+      r + 'src/frontend/sencha-extjs/data-view/*.js',
 
-      r + 'src/frontend/sencha-extjs/**/app.js',
-
-      './**/*-spec.js'
+      './*-spec.js'
     ],
-    
+
     proxies: {
       '/simple-app': 'http://localhost:1841/simple/app'
     },
@@ -36,7 +29,7 @@ module.exports = function(config) {
       r + 'vendors/extjs/examples/**/*.js'
     ],
     preprocessors: {
-      '../../../../../src/frontend/sencha-extjs/**/*.js': ['coverage']
+      '../../../../../src/frontend/sencha-extjs/data-view/*.js': ['coverage']
     },
     reporters: ['dots', 'coverage'],
     coverageReporter: {
