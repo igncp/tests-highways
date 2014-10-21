@@ -15,6 +15,7 @@
     "jasmine-node": "^1.14.5",
     "karma-cli": "0.0.4",
     "karma-coverage": "^0.2.6",
+    "karma-jasmine": "^0.2.0",
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-sinon": "^1.0.3",
     "lodash": "^2.4.1",
@@ -22,14 +23,11 @@
   },
   "scripts": {
     "list": "grep -Pzo '  \"scripts\":[\\s\\S]*^  ?}' package.json --color=never",
-    
     "jasmine-node": "node_modules/jasmine-node/bin/jasmine-node --verbose tests/unit/backend/jasmine-node/**/*-spec.js || true",
-    
     "karma-plain-js-jasmine": "node_modules/karma-cli/bin/karma start tests/unit/frontend/plain-js/jasmine/karma.conf.js || true",
     "karma-jquery-jasmine": "node_modules/karma-cli/bin/karma start tests/unit/frontend/jquery/jasmine/karma.conf.js || true",
     "karma-sencha-extjs-jasmine-simple": "node_modules/karma-cli/bin/karma start tests/unit/frontend/sencha-extjs/jasmine/simple/karma.conf.js || true",
     "karma-sencha-extjs-jasmine-data-view": "node_modules/karma-cli/bin/karma start tests/unit/frontend/sencha-extjs/jasmine/data-view/karma.conf.js || true",
-
     "sencha-extjs-server": "echo 'Port: 1841. Press Ctrl-C to stop the server...'; node_modules/http-server/bin/http-server src/frontend/sencha-extjs -p 1841 -s || true"
   }
 }

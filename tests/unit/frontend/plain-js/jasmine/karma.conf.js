@@ -1,10 +1,13 @@
+var r = '../../../../../';
+
 module.exports = function(config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine'],
     files: [
-      '../../../../../node_modules/lodash/lodash.js', // as utility
-      '../../../../../src/frontend/plain-js/**/*.js',
+      r + 'node_modules/lodash/lodash.js', // as utility
+      r + 'vendors/q/q.js', // used
+      r + 'src/frontend/plain-js/**/*.js',
       './**/*-spec.js'
     ],
     exclude: [],

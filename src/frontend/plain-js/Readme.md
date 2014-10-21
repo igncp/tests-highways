@@ -1,0 +1,1 @@
+This source code uses plain JavaScript code or rely in small libraries like Lodash or Q.
