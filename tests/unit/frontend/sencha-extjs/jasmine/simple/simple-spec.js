@@ -13,15 +13,9 @@ Ext.require([
 
 describe('sencha-extjs:', function() {
   beforeEach(function(done) {
-    var ready = false;
-    runs(function() {
-      Ext.onReady(function() {
-        ready = true;
-      });
+    Ext.onReady(function() {
+      done();
     });
-    waitsFor(function() {
-      return ready === true;
-    }, 'Timed out', 3500);
   });
 
   it('Jasmine works', function() {
