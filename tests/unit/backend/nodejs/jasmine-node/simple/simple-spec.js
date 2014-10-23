@@ -1,4 +1,5 @@
-var fs = require('../../../../../src/backend/nodejs/simple');
+var r = '../../../../../../';
+var fs = require(r + 'src/backend/nodejs/simple');
 
 describe('Simple spec', function() {
   it('jasmine-node works', function() {
