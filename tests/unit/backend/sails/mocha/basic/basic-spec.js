@@ -26,7 +26,7 @@ describe('Sails - Basic:', function() {
     expect(loadedHooksNumber).to.equal(20);
   });
 
-  after("lower sails", function(done) {
+  after("lowers sails", function(done) {
     Sails.lower(done);
   })
 });

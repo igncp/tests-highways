@@ -14,9 +14,11 @@
     "express": "^4.9.7",
     "http-server": "^0.7.2",
     "jasmine-node": "^1.14.5",
+    "karma-chai": "^0.1.0",
     "karma-cli": "0.0.4",
     "karma-coverage": "^0.2.6",
     "karma-jasmine": "^0.2.0",
+    "karma-mocha": "^0.1.9",
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-sinon": "^1.0.3",
     "lodash": "^2.4.1",
@@ -28,9 +30,11 @@
     "jasmine-node-nodejs": "node_modules/jasmine-node/bin/jasmine-node --verbose tests/unit/backend/nodejs/jasmine-node/**/*-spec.js || true",
     "karma-plain-js-jasmine": "node_modules/karma-cli/bin/karma start tests/unit/frontend/plain-js/jasmine/karma.conf.js || true",
     "karma-jquery-jasmine": "node_modules/karma-cli/bin/karma start tests/unit/frontend/jquery/jasmine/karma.conf.js || true",
+    "karma-angular-mocha": "node_modules/karma-cli/bin/karma start tests/unit/frontend/angular/mocha/karma.conf.js || true",
     "karma-sencha-extjs-jasmine-simple": "node_modules/karma-cli/bin/karma start tests/unit/frontend/sencha-extjs/jasmine/simple/karma.conf.js || true",
     "karma-sencha-extjs-jasmine-data-view": "node_modules/karma-cli/bin/karma start tests/unit/frontend/sencha-extjs/jasmine/data-view/karma.conf.js || true",
     "sencha-extjs-server": "echo 'Port: 1841. Press Ctrl-C to stop the server...'; node_modules/http-server/bin/http-server src/frontend/sencha-extjs -p 1841 -s || true",
+    "selenium-angular-basic": "ruby tests/visual/angular/selenium/basic.rb || true",
     "mocha-sails": "cd src/backend/sails/basic; ../../../../node_modules/mocha/bin/mocha ../../../../tests/unit/backend/sails/mocha/*/*.js || true"
   }
 }

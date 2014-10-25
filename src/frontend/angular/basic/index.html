@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="BasicApp">
+<head>
+    <title>AngularJS - Basic</title>
+    <script type="text/javascript" src="vendors/angular/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+    <h1>AngularJS - Basic</h1>
+    <div ng-controller="MainCtrl">
+        <p>Foo: {{foo}}</p>
+        <p><a href="" id="show-frame" ng-click="showFrame = !showFrame">Toggle frame</a></p>
+        <div ng-show="showFrame">
+            <p>Frame</p>
+        </div>
+        <box></box>
+    </div>
+</body>
+<style type="text/css">
+    .box {
+        border: 1px #ccc solid;
+        display: inline-block;
+        padding: 10px;
+    }
+    .box ul {
+        padding: 0;
+        list-style-type: none;
+    }
+</style>
+</html>
