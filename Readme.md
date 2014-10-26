@@ -10,7 +10,7 @@ Examples of practical tests written in JavaScript and Ruby for learning and prac
 
 ## Usage
 
-See the package.json to see which are the called commands, or run `npm run list` for a custom list command.
+Open the package.json to see which are the called commands, or call `npm run` for a list of commands.
 
 - Frontend JS with Jasmine and Karma, e.g. `npm run karma-plain-js-jasmine`
 - Backend JS with Jasmine and the jasmine-node module: `npm run jasmine-node`
@@ -27,6 +27,7 @@ And the testing frameworks and utilities:
 
 - Unit: Jasmine, Mocha, Sinon, Chai
 - Visual: Selenium
+- Other: Karma for continuous testing
 
 
 ## Special cases
