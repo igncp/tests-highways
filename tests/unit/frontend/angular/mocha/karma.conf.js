@@ -5,6 +5,7 @@ var config = {
   frameworks: ['mocha', 'chai'],
   files: [
     r + 'vendors/angular/angular.min.js',
+    r + 'vendors/angular-mocks/angular-mocks.js',
     r + 'src/frontend/angular/**/*.js',
     './*-spec.js'
   ],

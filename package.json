@@ -25,6 +25,7 @@
     "mocha": "^2.0.1",
     "sails": "^0.10.5"
   },
+
   "scripts": {
     "list": "grep -Pzo '  \"scripts\":[\\s\\S]*^  ?}' package.json --color=never",
     "jasmine-node-nodejs": "node_modules/jasmine-node/bin/jasmine-node --verbose tests/unit/backend/nodejs/jasmine-node/**/*-spec.js || true",

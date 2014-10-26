@@ -1,3 +1,8 @@
+def create_symlink key
+  command = "ln -s ../../../../vendors src/frontend/angular/#{key}/"
+  Process.spawn(command, out: '/dev/null', err: '/dev/null')
+end
+
 def kill_process_on_4000(pid)
   if !pid
     pid = `fuser -n tcp 4000 2> /dev/null`
@@ -6,14 +11,9 @@ def kill_process_on_4000(pid)
   Process.spawn(command, out: '/dev/null', err: '/dev/null')
 end
 
-def start_test
-  require 'selenium-webdriver'
-  kill_process_on_4000 false
-end
-
-def create_symlink key
-  command = "ln -s ../../../../vendors src/frontend/angular/#{key}/"
-  Process.spawn(command, out: '/dev/null', err: '/dev/null')
+def quit_after_waiting time
+  sleep time
+  $d.quit
 end
 
 def run_server key
@@ -28,4 +28,14 @@ def script command, var = false
   else
     $d.execute_script command
   end
+end
+
+def start_test
+  require 'selenium-webdriver'
+  kill_process_on_4000 false
+end
+
+def start_driver
+  $d = Selenium::WebDriver.for :chrome, switches: %w{--test-type}
+  $d.manage.window.maximize
 end
