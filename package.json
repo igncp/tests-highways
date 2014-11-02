@@ -37,6 +37,7 @@
     "sencha-extjs-server": "echo 'Port: 1841. Press Ctrl-C to stop the server...'; node_modules/http-server/bin/http-server src/frontend/sencha-extjs -p 1841 -s || true",
     "selenium-angular-basic": "ruby tests/visual/angular/selenium/basic.rb || true",
     "mocha-sails": "cd src/backend/sails/basic; ../../../../node_modules/mocha/bin/mocha ../../../../tests/unit/backend/sails/mocha/*/*.js || true",
-    "mocha-nodejs-coffee": " node_modules/mocha/bin/mocha tests/unit/backend/nodejs/mocha/*/*-spec.coffee --compilers coffee:coffee-script/register -w --reporter tap || true"
+    "mocha-nodejs-coffee": "node_modules/mocha/bin/mocha tests/unit/backend/nodejs/mocha/*/*-spec.coffee --compilers coffee:coffee-script/register -w || true",
+    "guard-plain-ruby-rspec": "guard --no-bundler-warning || true"
   }
 }

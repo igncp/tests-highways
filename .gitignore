@@ -3,3 +3,4 @@ vendors
 npm-debug.log
 karma-coverage
 .tmp
+Gemfile.lock
