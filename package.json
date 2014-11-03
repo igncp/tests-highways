@@ -14,6 +14,7 @@
     "coffee-script": "^1.8.0",
     "express": "^4.9.7",
     "http-server": "^0.7.2",
+    "intern": "^2.1.1",
     "jasmine-node": "^1.14.5",
     "karma-chai": "^0.1.0",
     "karma-cli": "0.0.4",
@@ -24,7 +25,9 @@
     "karma-sinon": "^1.0.3",
     "lodash": "^2.4.1",
     "mocha": "^2.0.1",
-    "sails": "^0.10.5"
+    "pioneer": "^0.10.5",
+    "sails": "^0.10.5",
+    "vows": "^0.7.0"
   },
   "scripts": {
     "list": "grep -Pzo '  \"scripts\":[\\s\\S]*^  ?}' package.json --color=never",
@@ -36,8 +39,10 @@
     "karma-sencha-extjs-jasmine-data-view": "node_modules/karma-cli/bin/karma start tests/unit/frontend/sencha-extjs/jasmine/data-view/karma.conf.js || true",
     "sencha-extjs-server": "echo 'Port: 1841. Press Ctrl-C to stop the server...'; node_modules/http-server/bin/http-server src/frontend/sencha-extjs -p 1841 -s || true",
     "selenium-angular-basic": "ruby tests/visual/angular/selenium/basic.rb || true",
+    "capybara-angular-basic": "rspec tests/functional/frontend/angular/capybara/ || true",
     "mocha-sails": "cd src/backend/sails/basic; ../../../../node_modules/mocha/bin/mocha ../../../../tests/unit/backend/sails/mocha/*/*.js || true",
     "mocha-nodejs-coffee": "node_modules/mocha/bin/mocha tests/unit/backend/nodejs/mocha/*/*-spec.coffee --compilers coffee:coffee-script/register -w || true",
+    "vows-nodejs-coffee": "node_modules/coffee-script/bin/coffee tests/unit/backend/nodejs/vows/*-spec.coffee || true",
     "guard-plain-ruby-rspec": "guard --no-bundler-warning || true"
   }
 }

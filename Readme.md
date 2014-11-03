@@ -1,6 +1,6 @@
 # Tests Highways
 
-Examples of practical tests written in JavaScript, CoffeeScript and Ruby for learning, practicing and exploring purposes.
+Examples of practical tests written in JavaScript, CoffeeScript and Ruby for learning, practicing and exploring purposes. The tested code can be custom code (placed in the `src` directory) or directly external modules / libraries.
 
 ## Installation
 
