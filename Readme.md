@@ -26,7 +26,7 @@ At this point, these JavaScript frameworks and libraries for the source that are
 
 And the testing frameworks and utilities:
 
-- Unit: Jasmine, Mocha, Sinon, Chai, RSpec
+- Unit: Jasmine, Mocha, Sinon, Chai, RSpec, Vows
 - Visual: Selenium
 - Other: Karma and Guard for continuous testing
 
