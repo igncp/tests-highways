@@ -4,6 +4,7 @@ vows = require 'vows'
 vows_spec = require 'vows/lib/vows/reporters/spec'
 chai = require 'chai'
 expect = chai.expect
+sinon = require 'sinon'
 
 vows
   .describe('Some lodash functions')
@@ -30,4 +31,16 @@ vows
         'returns the product': (topic)->
           expect(topic).to.equal(1 * 2 * 3)
 
+    '_.bind':
+      topic: ->
+        Foo = -> null
+        Foo::bar = -> @foo
+        Foo::bar = _.bind(Foo::bar, {foo: 'bar'})
+        Foo
+        
+      'generated function discards object property': (Foo)->
+        foo = new Foo
+        foo.foo = 'this will not be considered when using obj.bar()'
+        expect(foo.bar()).to.equal('bar')
+        
   .run({reporter: vows_spec, watch: true})
