@@ -1,0 +1,1 @@
+Tests for the plain-js/algorithms library
