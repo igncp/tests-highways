@@ -4,7 +4,6 @@ var config = {
   basePath: '',
   frameworks: ['jasmine', 'sinon'],
   files: [
-    r + 'node_modules/lodash/lodash.js', // as utility
     r + 'vendors/jquery/dist/jquery.min.js',
     r + 'src/frontend/jquery/**/*.js',
     './*-spec.js'
