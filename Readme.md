@@ -28,14 +28,15 @@ And the testing frameworks and utilities:
 
 - Unit: Jasmine, Mocha, Sinon, Chai, RSpec, Vows
 - Visual: Selenium
-- Other: Karma and Guard for continuous testing
+- Functional: Capybara
+- Other: Karma and Guard for continuous testing, Benchmark for performance
 
 
 ## Special cases
 
 In some cases, you must take extra action to run the tests. They are listed here:
 
-- For Sails.js tests, you have to go to the folder you want to test (e.g. `cd src/backend/sails/basic`) and install the modules: `npm install`. After that, you can test it normally: `npm run mocha-sails`
+- For Sails.js tests, you have to go to the folder you want to test (e.g. `cd src/backend/sails/basic`) and install the modules: `npm install`. After that, you can test it normally: `npm run mocha-sails`. It also applies for benchmark tests of sails.
 
 - For ExtJS tests, you must start a server. In the root directory of the project and with another terminal of the one that runs the tests, call `npm run sencha-extjs-server`
 

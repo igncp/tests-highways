@@ -4,3 +4,4 @@ npm-debug.log
 karma-coverage
 .tmp
 Gemfile.lock
+compiled_coffee
