@@ -5,3 +5,5 @@ karma-coverage
 .tmp
 Gemfile.lock
 compiled_coffee
+/reports/*
+!/reports/Readme.md

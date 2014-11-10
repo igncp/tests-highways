@@ -34,11 +34,14 @@
     "mocha": "^2.0.1",
     "nodemon": "^1.2.1",
     "pioneer": "^0.10.5",
+    "plato": "^1.2.0",
     "sails": "^0.10.5",
+    "sinon-chai": "^2.6.0",
     "vows": "^0.7.0"
   },
   "scripts": {
     "list": "grep -Pzo '  \"scripts\":[\\s\\S]*^  ?}' package.json --color=never",
+    "reports-server": "echo 'Server listening in port 8080';node_modules/http-server/bin/http-server reports -s -c-1",
     "jasmine-node-nodejs": "node_modules/jasmine-node/bin/jasmine-node --verbose tests/unit/backend/nodejs/jasmine-node/**/*-spec.js || true",
     "karma-plain-js-jasmine": "node_modules/karma-cli/bin/karma start tests/unit/frontend/plain-js/jasmine/karma.conf.js || true",
     "karma-plain-js-algorithms-mocha": "node_modules/karma-cli/bin/karma start tests/unit/frontend/plain-js/mocha/karma.conf.js || true",

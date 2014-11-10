@@ -1,5 +1,5 @@
 (function() {
-  var chai, constructor, expect, r, sinon, vows, vows_spec;
+  var chai, constructor, expect, r, vows, vows_spec;
 
   vows = require('vows');
 
@@ -8,8 +8,6 @@
   chai = require('chai');
 
   expect = chai.expect;
-
-  sinon = require('sinon');
 
   r = '../../../../../../../';
 

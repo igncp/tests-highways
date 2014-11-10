@@ -2,7 +2,6 @@ vows = require 'vows'
 vows_spec = require 'vows/lib/vows/reporters/spec'
 chai = require 'chai'
 expect = chai.expect
-sinon = require 'sinon'
 
 r = '../../../../../../../'
 constructor = require r + 'src/backend/nodejs/design-patterns/constructor'
@@ -50,5 +49,3 @@ vows
           expect(ford.toString()).not.to.equal(seat.toString())
     
   .export(module)
-
-  

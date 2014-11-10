@@ -1,5 +1,5 @@
 (function() {
-  var chai, expect, moduleP, r, sinon, vows, vows_spec;
+  var chai, expect, moduleP, r, vows, vows_spec;
 
   vows = require('vows');
 
@@ -8,8 +8,6 @@
   chai = require('chai');
 
   expect = chai.expect;
-
-  sinon = require('sinon');
 
   r = '../../../../../../../';
 
@@ -23,6 +21,29 @@
           expect(moduleP.myNamespace).not.to.include.keys('myPrivateVar');
           expect(moduleP.myNamespace).to.respondTo('myPublicFunction');
           return expect(moduleP.myNamespace).not.to.respondTo('myPrivateMethod');
+        }
+      },
+      'cart object': {
+        topic: function() {
+          return moduleP.cart;
+        },
+        'stores elements': function(cart) {
+          expect(cart.length).to.be.undefined;
+          expect(cart.getItemsCount()).to.equal(0);
+          cart.addItem('tortellini');
+          return expect(cart.getItemsCount()).to.equal(1);
+        },
+        'addItem method can be chained': function(cart) {
+          return expect(cart.addItem('tangerines')).to.equal(cart);
+        }
+      },
+      'exposes the right properties': {
+        topic: function() {
+          return moduleP.revealingModule;
+        },
+        "doesn't have access to the privateFunction": function(revealingModule) {
+          expect(revealingModule).not.to.include.keys('privateFunction', 'privateVar', 'aliasedVar');
+          return expect(revealingModule).to.include.keys('setName', 'getName', 'greeting');
         }
       }
     }
