@@ -29,7 +29,7 @@ And the testing frameworks and utilities:
 - Unit: Jasmine, Mocha, Sinon, Chai, RSpec, Vows
 - Visual: Selenium
 - Functional: Capybara
-- Reporting: Istambul, Plato
+- Reporting: Istanbul, Plato
 - Benchmark: BenchmarkJS
 - Other: Grunt, Karma and Guard for continuous testing
 

@@ -1,4 +1,5 @@
 var r = '../../../../../../'; // root dir
+var source = r + 'src/frontend/sencha-extjs/simple/app.js';
 
 var config = {
   basePath: '',
@@ -15,7 +16,7 @@ var config = {
       served: true
     },
 
-    r + 'src/frontend/sencha-extjs/simple/app.js',
+    source,
 
     './*-spec.js'
   ],
@@ -32,7 +33,7 @@ var config = {
   reporters: ['dots', 'coverage'],
   coverageReporter: {
     type: 'html',
-    dir: r + 'karma-coverage'
+    dir: r + 'reports/istanbul/frontend/extjs/simple/'
 
   },
   port: 9876,
@@ -48,7 +49,7 @@ var config = {
   ]
 };
 
-config.preprocessors[r + 'src/frontend/sencha-extjs/**/*.js'] = ['coverage'];
+config.preprocessors[source] = ['coverage'];
 
 module.exports = function(co) {
   config.logLevel = co.LOG_INFO;

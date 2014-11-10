@@ -14,10 +14,14 @@ plato-backend-sails:
 plato-frontend:
 	@node_modules/plato/bin/plato -rq -d reports/plato/frontend src/frontend > /dev/null
 
-rm-reports: rm-plato
+rm-reports: rm-plato rm-istanbul
+	@echo 'The reports were removed'
 
 rm-plato:
-	rm -rf reports/plato
+	@rm -rf reports/plato
+
+rm-istanbul:
+	@rm -rf reports/istanbul
 
 gems-install:
 	@bundle install > /dev/null

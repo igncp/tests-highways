@@ -1,4 +1,5 @@
 var r = '../../../../../'; // root dir
+var source = r + 'src/frontend/angular/**/*.js';
 
 var config = {
   basePath: '',
@@ -6,7 +7,7 @@ var config = {
   files: [
     r + 'vendors/angular/angular.min.js',
     r + 'vendors/angular-mocks/angular-mocks.js',
-    r + 'src/frontend/angular/**/*.js',
+    source,
     './*-spec.js'
   ],
 
@@ -19,8 +20,7 @@ var config = {
   reporters: ['dots', 'coverage'],
   coverageReporter: {
     type: 'html',
-    dir: r + 'karma-coverage'
-
+    dir: r + 'reports/istanbul/frontend/angular'
   },
   port: 9876,
   colors: true,
@@ -35,7 +35,7 @@ var config = {
   ]
 };
 
-config.preprocessors[r + 'src/frontend/jquery/**/*.js'] = ['coverage'];
+config.preprocessors[source] = ['coverage'];
 
 module.exports = function(co) {
   config.logLevel = co.LOG_INFO;

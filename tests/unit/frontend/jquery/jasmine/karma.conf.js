@@ -1,11 +1,12 @@
 var r = '../../../../../'; // root dir
+var source = r + 'src/frontend/jquery/**/*.js';
 
 var config = {
   basePath: '',
   frameworks: ['jasmine', 'sinon'],
   files: [
     r + 'vendors/jquery/dist/jquery.min.js',
-    r + 'src/frontend/jquery/**/*.js',
+    source,
     './*-spec.js'
   ],
 
@@ -14,7 +15,7 @@ var config = {
   reporters: ['dots', 'coverage'],
   coverageReporter: {
     type: 'html',
-    dir: r + 'karma-coverage'
+    dir: r + 'reports/istanbul/frontend/jquery'
 
   },
   port: 9876,
@@ -30,7 +31,7 @@ var config = {
   ]
 };
 
-config.preprocessors[r + 'src/frontend/jquery/**/*.js'] = ['coverage'];
+config.preprocessors[source] = ['coverage'];
 
 module.exports = function(co) {
   config.logLevel = co.LOG_INFO;

@@ -1,10 +1,11 @@
 var r = '../../../../../'; // root dir
+var source = r + 'src/frontend/plain-js/algorithms/**/*.js';
 
 var config = {
   basePath: '',
   frameworks: ['mocha', 'chai'],
   files: [
-    r + 'src/frontend/plain-js/algorithms/**/*.js',
+    source,
     './*-spec.js'
   ],
 
@@ -16,8 +17,7 @@ var config = {
   reporters: ['dots', 'coverage'],
   coverageReporter: {
     type: 'html',
-    dir: r + 'karma-coverage'
-
+    dir: r + 'reports/istanbul/frontend/plain-js/mocha'
   },
   port: 9876,
   colors: true,
@@ -32,7 +32,7 @@ var config = {
   ]
 };
 
-config.preprocessors[r + 'src/frontend/plain-js/agorithms/**/*.js'] = ['coverage'];
+config.preprocessors[source] = ['coverage'];
 
 module.exports = function(co) {
   config.logLevel = co.LOG_INFO;
