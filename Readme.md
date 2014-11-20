@@ -7,6 +7,7 @@ Examples of practical tests written in JavaScript, CoffeeScript and Ruby for lea
 - Download. You need node.js (with npm) and bower
 - `[sudo] npm install` that generates a node_modules directory
 - `bower install` that generates a vendors directory. It will probably last several minutes
+- Optional: Run the Makefile with `make`
 
 ## Usage
 
