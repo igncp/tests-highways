@@ -3,21 +3,14 @@ describe('sencha-extjs:', function() {
     Ext.onReady(done);
   });
 
-  it('Extjs is loaded', function() {
-    expect(Ext).toBeDefined();
-  });
-
   describe('CustomPanel', function() {
     var customPanel;
     beforeEach(function() {
       customPanel = Ext.create('CustomPanel');
     });
 
-    it("is created", function() {
+    it("is created and has items", function() {
       expect(customPanel).toBeDefined();
-    });
-
-    it("has items", function() {
       expect(customPanel.items.length).toBeGreaterThan(0);
     });
   });
@@ -28,16 +21,12 @@ describe('sencha-extjs:', function() {
       dataView = Ext.create('CustomPanel').down('dataview');
     });
 
-    it("has a store", function() {
-      expect(dataView.store).toBeDefined();
+    it("has a nonempty store", function() {
       expect(dataView.store).toBeTruthy();
-    });
-
-    it("the store is non empty", function() {
       expect(dataView.store.data.length).toBeGreaterThan(0);
     });
 
-    it("the store allow the addition of an arbitrary item", function() {
+    it("the store allows the addition of an arbitrary item", function() {
       var initialLength  = dataView.store.data.length;
       dataView.store.add({foo: 'bar'});
       expect(dataView.store.data.length).toBe(initialLength + 1);

@@ -26,3 +26,21 @@ rm-istanbul:
 gems-install:
 	@bundle install > /dev/null
 	@echo 'Gems installed.'
+
+set-tests-executable:
+	chmod +x tests/bin/*
+
+extjs-port=1841
+server-extjs:
+	@echo 'Port: $(extjs-port). Press Ctrl-C to stop the server...'
+	@node_modules/http-server/bin/http-server src/frontend/sencha-extjs -p $(extjs-port) -s --cors
+
+# CORS enabled to be able to serve vendors resources
+root-port=3000
+server-root:
+	@echo "Port: $(root-port). Press Ctrl-C to stop the server..."
+	@node_modules/http-server/bin/http-server . -p $(root-port) -s --cors
+
+server-reports:
+	@echo 'Server listening in port 8282'
+	@node_modules/http-server/bin/http-server reports -p 8282 -s -c-1

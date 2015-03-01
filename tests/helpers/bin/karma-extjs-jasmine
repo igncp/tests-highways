@@ -1,0 +1,2 @@
+FILEDIR=`dirname $0`
+sh $FILEDIR/start-karma tests/unit/frontend/sencha-extjs/jasmine/$1/karma.conf.js

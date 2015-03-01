@@ -1,6 +1,6 @@
 # Tests Highways
 
-Examples of practical tests written in JavaScript, CoffeeScript and Ruby for learning, practicing and exploring purposes. The tested code can be custom code (placed in the `src` directory) or directly external modules / libraries.
+Examples of practical tests written in JavaScript, CoffeeScript and Ruby for learning, practicing and exploring purposes. The tested code can be custom code (placed in the `src` directory) or directly external modules / libraries. The main objective of this project would be: "get to the point where writting tests actually saves time pragmatically at medium-term"
 
 ## Installation
 
@@ -16,6 +16,10 @@ Open the package.json to see which are the called commands, or call `npm run` fo
 - Frontend JS with Jasmine or Mocha and Karma, e.g. `npm run karma-plain-js-jasmine`
 - Backend JS or CS with Jasmine, Mocha or Vows, e.g.: `npm run jasmine-node`
 - Backend Ruby with RSpec and Guard, e.g.: `npm run guard-plain-ruby-rspec`
+
+Other tests scripts are in `tests/bin`.
+
+To check some src results you need to lift two servers at the same time, the root one (`make server-root`) and the src specific one (e.g. `server-extjs`) if any.
 
 ## Frameworks used
 

@@ -1,14 +1,18 @@
 // From the Sencha Example dataview
 
 Ext.Loader.setConfig({
-  enabled: true
+  enabled: true,
+  paths: {
+    MyApp: '.'
+  }
 });
 
 Ext.require([
   'Ext.data.Model',
   'Ext.data.Store',
   'Ext.panel.Panel',
-  'Ext.view.View'
+  'Ext.view.View',
+  'MyApp.MyStore'
 ]);
 
 Ext.onReady(function() {
@@ -19,7 +23,7 @@ Ext.onReady(function() {
     width: 535,
     title: 'Simple DataView (0 items selected)',
     items: Ext.create('Ext.view.View', {
-      store: Ext.create('MyStore', {
+      store: Ext.create('MyApp.MyStore', {
         data: [{
           name: 'Foo'
         }, {
