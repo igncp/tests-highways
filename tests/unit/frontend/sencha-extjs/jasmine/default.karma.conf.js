@@ -1,6 +1,7 @@
-var r = '../../../../../../'; // root dir
+var r = '../root_symlink/'; // root dir
 
 module.exports = function(deps) {
+  console.log("deps.relSource", deps.relSource);
   var source = r + deps.relSource,
     config = {
       basePath: '',

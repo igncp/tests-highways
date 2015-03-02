@@ -22,6 +22,7 @@ Ext.onReady(function() {
     collapsible: true,
     width: 535,
     title: 'Simple DataView (0 items selected)',
+    renderTo: Ext.getBody(),
     items: Ext.create('Ext.view.View', {
       store: Ext.create('MyApp.MyStore', {
         data: [{
