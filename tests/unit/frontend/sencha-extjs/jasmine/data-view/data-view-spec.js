@@ -4,12 +4,8 @@ describe('sencha-extjs:', function() {
   });
 
   describe('CustomPanel', function() {
-    var customPanel;
-    beforeEach(function() {
-      customPanel = Ext.create('CustomPanel');
-    });
-
     it("is created and has items", function() {
+      var customPanel = Ext.create('CustomPanel');
       expect(customPanel).toBeDefined();
       expect(customPanel.items.length).toBeGreaterThan(0);
     });
