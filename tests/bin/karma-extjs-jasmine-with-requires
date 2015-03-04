@@ -1,0 +1,1 @@
+sh tests/helpers/bin/karma-extjs-jasmine with-requires
